@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch a sketch</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			height: 100vh;
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+			padding-top: 20px;
+		}
+
+		#resize-btn {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-bottom: 20px;
+		}
+
+		.grid-container {
+			display: grid;
+			gap: 1px;
+			width: 960px;
+			height: 960px;
+
+		}
+
+		.grid-item {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			cursor: pointer;
+			transition: background-color 0.2s ease;
+		}
+
+		.grid-item:hover {
+			background-color: #000;
+		}
+
+	</style>
+</head>
+<body>
+	<button id="resize-btn">Resize Grid</button>
+	<div class="grid-container"></div>
+	<script src="etch-a-sketch.js"></script>
+</body>
+</html>
