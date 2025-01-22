@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector(".grid-container");
 const resizeButton = document.getElementById("resize-btn");
+const clearButton = document.getElementById("clear-btn");
 
 function createGrid(squaresPerSide) {
   gridContainer.innerHTML = "";
@@ -37,6 +38,15 @@ resizeButton.addEventListener("click", () => {
 
 	createGrid(squaresPerSide);
 });
+
+clearButton.addEventListener("click", clearGrid);
+
+function clearGrid() {
+	const gridItems = gridContainer.querySelectorAll(".grid-item");
+	gridItems.forEach(item => {
+		item.style.backgroundColor = "white";
+	});
+}
 
 createGrid(16);
 

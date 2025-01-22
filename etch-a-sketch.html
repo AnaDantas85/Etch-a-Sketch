@@ -9,7 +9,7 @@
 		* {
 			margin: 0;
 			padding: 0;
-			box-sizing: border-box
+			box-sizing: border-box;
 		}
 
 		body {
@@ -24,6 +24,13 @@
 		}
 
 		#resize-btn {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-bottom: 20px;
+		}
+
+		#clear-btn {
 			padding: 10px 20px;
 			font-size: 16px;
 			cursor: pointer;
@@ -53,6 +60,7 @@
 </head>
 <body>
 	<button id="resize-btn">Resize Grid</button>
+	<button id="clear-btn">Clear Grid</button>
 	<div class="grid-container"></div>
 	<script src="etch-a-sketch.js"></script>
 </body>
